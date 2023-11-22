@@ -2,7 +2,7 @@
 class Object;
 struct tEvent
 {
-	EVENT_TYPE eEve; // ÀÌº¥Æ® Å¸ÀÔ
+	EVENT_TYPE eEve; // ï¿½Ìºï¿½Æ® Å¸ï¿½ï¿½
 	Object* Obj;
 	OBJECT_GROUP ObjType;
 };

@@ -8,7 +8,7 @@ Monster::Monster()
 	: m_fSpeed(100.f)
 	, m_fMaxDis(50.f)
 	, m_vCenterPos(Vec2(0.f,0.f))
-	, m_fDir(1.f) // ¿À¸¥ÂÊºÎÅÍ ÀÌµ¿
+	, m_fDir(1.f) // ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½ï¿½ï¿½ ï¿½Ìµï¿½
 	, m_iHp(5)
 {
 	CreateCollider();
@@ -23,11 +23,11 @@ void Monster::Update()
 	Vec2 vCurPos = GetPos();
 	vCurPos.x += m_fSpeed * fDT * m_fDir;
 	
-	// ³»°¡ °¥ ¼ö ÀÖ´Â °Å¸® ÃÖ´ë·Î °¬³Ä? => ¹æÇâ ¹Ù²ãÁÙ°Å¾ß.
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Å¸ï¿½ ï¿½Ö´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½? => ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½Ù°Å¾ï¿½.
 	float fDist = abs(m_vCenterPos.x - vCurPos.x) - m_fMaxDis;
 	if (fDist > 0.f)
 	{
-		// dir ¹Ù²Ù±â
+		// dir ï¿½Ù²Ù±ï¿½
 		m_fDir *= -1;
 		vCurPos.x += fDist * m_fDir;
 	}
@@ -39,7 +39,7 @@ void Monster::EnterCollision(Collider* _pOther)
 	const Object* pOtherObj = _pOther->GetObj();
 	if (pOtherObj->GetName() == L"Player_Bullet")
 	{
-		// »èÁ¦Ã³¸®ÇØÁÖ¸éµÅ.
+		// ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½.
 		m_iHp--;
 		if(m_iHp<=0)
 			EventMgr::GetInst()->DeleteObject(this);

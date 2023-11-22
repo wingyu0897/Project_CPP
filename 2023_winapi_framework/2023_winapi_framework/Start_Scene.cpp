@@ -7,21 +7,24 @@
 #include "KeyMgr.h"
 #include "CollisionMgr.h"
 #include "ResMgr.h"
+#include "SceneMgr.h"
+#include "Texture.h"
 void Start_Scene::Init()
 {
 	Object* pObj = new Player;
 	pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
+	//pObj->SetPos((Vec2({540.f, 540.f})));
 	pObj->SetScale(Vec2(100.f,100.f));
 	AddObject(pObj, OBJECT_GROUP::PLAYER);
 
-	// ¸ó½ºÅÍ ¼¼ÆÃ ¸¶±¸¸¶±¸ ¹èÄ¡¸¦ ÇØº¾½Ã´Ù.
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Øºï¿½ï¿½Ã´ï¿½.
 
 	Vec2 vResolution = Core::GetInst()->GetResolution();
 	Monster* pMonster = nullptr;
-	int iMonster = 10;		// ¸ó½ºÅÍ ¼ö 
-	float fMoveDist = 30.f; // ¿òÁ÷ÀÏ °Å¸®
-	float fMonsterScale = 50.f; // ¸ó½ºÅÍ Å©±â
-	// ÇØ»óµµx - ( ¿òÁ÷ÀÏ °Å¸® + ¿ÀºêÁ§Æ® Å©±â /2) * 2 / ¸ó½ºÅÍ¼ö -1 
+	int iMonster = 10;		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
+	float fMoveDist = 30.f; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½
+	float fMonsterScale = 50.f; // ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½
+	// ï¿½Ø»ï¿½x - ( ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Å©ï¿½ï¿½ /2) * 2 / ï¿½ï¿½ï¿½Í¼ï¿½ -1 
 	float fTerm = (vResolution.x - (fMoveDist + fMonsterScale / 2.f) * 2) 
 					/ (float)(iMonster -1);
 	for (int i = 0; i < iMonster; ++i)
@@ -35,12 +38,12 @@ void Start_Scene::Init()
 		pMonster->SetMoveDis(fMoveDist);
 		AddObject(pMonster, OBJECT_GROUP::MONSTER);
 	}
-	// »ç¿îµå ¼¼ÆÃ
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\Retro_bgm.wav", true);
 	ResMgr::GetInst()->LoadSound(L"Shoot", L"Sound\\laserShoot.wav", false);
 	ResMgr::GetInst()->Play(L"BGM");
 
-	// Ãæµ¹Ã¼Å©ÇØ¾ßµÇ´Â°ÍµéÀ» ¼³Á¤ÇÏÀÚ.
+	// ï¿½æµ¹Ã¼Å©ï¿½Ø¾ßµÇ´Â°Íµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::BULLET, OBJECT_GROUP::MONSTER);
 }
 
@@ -48,12 +51,20 @@ void Start_Scene::Update()
 {
 	Scene::Update();
 	//if(KEY_DOWN(KEY_TYPE::ENTER))
-	//	// ¾À º¯°æ
+	//	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	if (KEY_DOWN(KEY_TYPE::P))
+	{
+		SceneMgr::GetInst()->LoadScene(L"Game_Scene");
+	}
 }
 
 void Start_Scene::Render(HDC _dc)
 {
 	Scene::Render(_dc);
+	Texture* grow = ResMgr::GetInst()->TexLoad(L"Grow", L"Texture\\grow.bmp");
+	int Width = grow->GetWidth();
+	int Height = grow->GetHeight();
+	TransparentBlt(_dc, 0, 0, 720, 720, grow->GetDC(), 0, 0, Width, Height, RGB(255, 255, 255));
 }
 
 void Start_Scene::Release()
