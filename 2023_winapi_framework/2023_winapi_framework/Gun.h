@@ -19,5 +19,6 @@ private:
 	HDC m_hbackDC;
 	HBITMAP m_hbackbit;
     wchar_t m_str[255];
+	bool isRight;
 };
 

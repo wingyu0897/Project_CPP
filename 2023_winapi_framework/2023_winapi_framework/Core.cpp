@@ -87,7 +87,7 @@ void Core::Render()
 {
 	// ĥ�Ѵ�.
 	//Rectangle(m_hbackDC, -1,-1,m_ptResolution.x +1,m_ptResolution.y + 1);
-	PatBlt(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y, WHITENESS);
+	PatBlt(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y, BLACKNESS);
 
 	SceneMgr::GetInst()->Render(m_hbackDC);
 	/*Vec2 vPos = m_obj.GetPos();

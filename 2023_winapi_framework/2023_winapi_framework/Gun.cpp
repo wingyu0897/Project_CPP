@@ -8,18 +8,21 @@
 
 Gun::Gun()
 {
-	m_pTex = ResMgr::GetInst()->TexLoad(L"Gun", L"Texture\\Sniper.bmp");
+	m_pTex = ResMgr::GetInst()->TexLoad(L"Sniper1", L"Texture\\Sniper1.bmp");
+	ResMgr::GetInst()->TexLoad(L"Sniper2", L"Texture\\Sniper2.bmp");
+	isRight = true;
+
 	m_hMembit = CreateCompatibleBitmap(Core::GetInst()->GetMainDC(), m_pTex->GetWidth(), m_pTex->GetWidth());
 	m_hMemDC = CreateCompatibleDC(Core::GetInst()->GetMainDC());
 	SelectObject(m_hMemDC, m_hMembit);
 	m_hbackbit = CreateCompatibleBitmap(Core::GetInst()->GetMainDC(), m_pTex->GetWidth() * 2, m_pTex->GetWidth());
 	m_hbackDC = CreateCompatibleDC(Core::GetInst()->GetMainDC());
 	SelectObject(m_hbackDC, m_hbackbit);
+
 	Vec2 vPos = GetPos();
 	Vec2 vScale = GetScale();
 	int Width = m_pTex->GetWidth();
 	int Height = m_pTex->GetHeight();
-
 	HBRUSH brush = CreateSolidBrush(RGB(255, 0, 255)); //create brush
 	SelectObject(m_hbackDC, brush); //select brush into DC
 	Rectangle(m_hbackDC, -5, -5, m_pTex->GetWidth() + 10, m_pTex->GetWidth() + 10);
@@ -33,6 +36,18 @@ Gun::~Gun()
 
 void Gun::Rotate(double angle)
 {
+	double deg = angle * 180 / PI;
+	if (isRight && abs(deg) > 90)
+	{
+		isRight = false;
+		m_pTex = ResMgr::GetInst()->TexFind(L"Sniper2");
+	}
+	else if (!isRight && abs(deg) <= 90)
+	{
+		isRight = true;
+		m_pTex = ResMgr::GetInst()->TexFind(L"Sniper1");
+	}
+
 	Vec2 vPos = GetPos();
 	Vec2 vScale = GetScale();
 
@@ -69,14 +84,23 @@ void Gun::Rotate(double angle)
 	//m_pPoint[2].x = vPos.x + m_vRotatedDir[2].x;
 	//m_pPoint[2].y = vPos.y + m_vRotatedDir[2].y;
 
-	m_pPoint[0].x = m_vRotatedDir[0].x + m_pTex->GetWidth() / 2;
-	m_pPoint[0].y = m_vRotatedDir[0].y + m_pTex->GetWidth() / 2;
+	//m_pPoint[0].x = m_vRotatedDir[0].x + m_pTex->GetWidth() / 2;
+	//m_pPoint[0].y = m_vRotatedDir[0].y + m_pTex->GetWidth() / 2;
 
-	m_pPoint[1].x = m_vRotatedDir[1].x + m_pTex->GetWidth() / 2;
-	m_pPoint[1].y = m_vRotatedDir[1].y + m_pTex->GetWidth() / 2;
+	//m_pPoint[1].x = m_vRotatedDir[1].x + m_pTex->GetWidth() / 2;
+	//m_pPoint[1].y = m_vRotatedDir[1].y + m_pTex->GetWidth() / 2;
 
-	m_pPoint[2].x = m_vRotatedDir[2].x + m_pTex->GetWidth() / 2;
-	m_pPoint[2].y = m_vRotatedDir[2].y + m_pTex->GetWidth() / 2;
+	//m_pPoint[2].x = m_vRotatedDir[2].x + m_pTex->GetWidth() / 2;
+	//m_pPoint[2].y = m_vRotatedDir[2].y + m_pTex->GetWidth() / 2;
+	 
+	m_pPoint[0].x = m_vRotatedDir[0].x + vScale.x / 2;
+	m_pPoint[0].y = m_vRotatedDir[0].y + vScale.x / 2;
+
+	m_pPoint[1].x = m_vRotatedDir[1].x + vScale.x / 2;
+	m_pPoint[1].y = m_vRotatedDir[1].y + vScale.x / 2;
+
+	m_pPoint[2].x = m_vRotatedDir[2].x + vScale.x / 2;
+	m_pPoint[2].y = m_vRotatedDir[2].y + vScale.x / 2;
 }
 
 void Gun::Render(HDC _dc)

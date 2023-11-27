@@ -19,7 +19,7 @@ void Start_Scene::Init()
 
 	Object* pGun = new Gun();
 	pGun->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2 })));
-	pGun->SetScale(Vec2(200.f, 80.f));
+	pGun->SetScale(Vec2(125.f, 35.f));
 	AddObject(pGun, OBJECT_GROUP::GUN);
 
 	// ���� ���� �������� ��ġ�� �غ��ô�.
