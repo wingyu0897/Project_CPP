@@ -10,6 +10,7 @@ public:
 	~Gun();
 public:
 	void Render(HDC _dc) override;
+	void Rotate(double angle) override;
 private:
     void CreateBullet();
 private:

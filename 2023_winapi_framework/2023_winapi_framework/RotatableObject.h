@@ -10,7 +10,7 @@ public:
 public:
     void Update() override;
     void Render(HDC _dc) override;
-    void Rotate(double angle);
+    virtual void Rotate(double angle);
 protected:
     Texture* m_pTex;
     double m_dAngle;

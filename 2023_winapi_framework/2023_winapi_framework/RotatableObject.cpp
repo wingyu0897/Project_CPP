@@ -51,12 +51,12 @@ void RotatableObject::Rotate(double angle)
 	m_fDistance[1] = sqrt(pow(m_vDir[1].x, 2) + pow(m_vDir[0].y, 2));
 	m_fDistance[2] = sqrt(pow(m_vDir[2].x, 2) + pow(m_vDir[0].y, 2));
 
-	m_vRotatedDir[0] = Vec2(m_vDir[0].x * (float)cos(m_dAngle) - m_vDir[0].y * (float)sin(m_dAngle)
-		, m_vDir[0].x * (float)sin(m_dAngle) + m_vDir[0].y * (float)cos(m_dAngle));
-	m_vRotatedDir[1] = Vec2(m_vDir[1].x * (float)cos(m_dAngle) - m_vDir[1].y * (float)sin(m_dAngle)
-		, m_vDir[1].x * (float)sin(m_dAngle) + m_vDir[1].y * (float)cos(m_dAngle));
-	m_vRotatedDir[2] = Vec2(m_vDir[2].x * (float)cos(m_dAngle) - m_vDir[2].y * (float)sin(m_dAngle)
-		, m_vDir[2].x * (float)sin(m_dAngle) + m_vDir[2].y * (float)cos(m_dAngle));
+	m_vRotatedDir[0] = Vec2(m_vDir[0].x * (float)cos(angle) - m_vDir[0].y * (float)sin(angle)
+		, m_vDir[0].x * (float)sin(angle) + m_vDir[0].y * (float)cos(angle));
+	m_vRotatedDir[1] = Vec2(m_vDir[1].x * (float)cos(angle) - m_vDir[1].y * (float)sin(angle)
+		, m_vDir[1].x * (float)sin(angle) + m_vDir[1].y * (float)cos(angle));
+	m_vRotatedDir[2] = Vec2(m_vDir[2].x * (float)cos(angle) - m_vDir[2].y * (float)sin(angle)
+		, m_vDir[2].x * (float)sin(angle) + m_vDir[2].y * (float)cos(angle));
 
 	m_pPoint[0].x = vPos.x + m_vRotatedDir[0].x;
 	m_pPoint[0].y = vPos.y + m_vRotatedDir[0].y;
