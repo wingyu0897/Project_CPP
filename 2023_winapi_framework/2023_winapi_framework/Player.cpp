@@ -103,10 +103,10 @@ void Player::CreateBullet()
 
 void Player::Render(HDC _dc)
 {
-	Vec2 vPos = GetPos();
-	Vec2 vScale = GetScale();
-	int Width = m_pTex->GetWidth();
-	int Height = m_pTex->GetHeight();
+	//Vec2 vPos = GetPos();
+	//Vec2 vScale = GetScale();
+	//int Width = m_pTex->GetWidth();
+	//int Height = m_pTex->GetHeight();
 	//// 1. �⺻ �ű��
 	//BitBlt(_dc
 	//	,(int)(vPos.x - vScale.x /2)

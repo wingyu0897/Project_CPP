@@ -24,6 +24,7 @@ enum class OBJECT_GROUP
 {
 	DEFAULT,
 	PLAYER,
+	GUN,
 	BULLET,
 	MONSTER,
 	END = 30
