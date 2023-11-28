@@ -27,6 +27,7 @@ enum class OBJECT_GROUP
 	GUN,
 	BULLET,
 	MONSTER,
+	CAGE,
 	END = 30
 };
 

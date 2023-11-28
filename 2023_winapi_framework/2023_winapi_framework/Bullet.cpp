@@ -1,13 +1,16 @@
 #include "pch.h"
 #include "Bullet.h"
 #include "TimeMgr.h"
+#include "EventMgr.h"
 #include "ResMgr.h"
 #include "Texture.h"
+#include "Collider.h"
 Bullet::Bullet()
 //	: m_fDir(-1.f)
 	: m_fTheta(0.f)
 	, m_vDir(Vec2(0.f,0.f))
 	, m_pTex(nullptr)
+	, m_fSpeed(500.f)
 {
 	m_pTex = ResMgr::GetInst()->TexLoad(L"Bullet", L"Texture\\Bullet.bmp");
 	CreateCollider();
@@ -24,8 +27,8 @@ void Bullet::Update()
 	//vPos.y += 500.f * fDT * m_fDir;
 	//vPos.x += 500.f * fDT * cosf(m_fTheta);
 	//vPos.y += 500.f * fDT * sinf(m_fTheta);
-	vPos.x += 500.f * fDT * m_vDir.x;
-	vPos.y += 500.f * fDT * m_vDir.y;
+	vPos.x += m_fSpeed * fDT * m_vDir.x;
+	vPos.y += m_fSpeed * fDT * m_vDir.y;
 	SetPos(vPos);
 }
 
@@ -42,4 +45,9 @@ void Bullet::Render(HDC _dc)
 		, Width, Height, m_pTex->GetDC()
 		, 0, 0, Width,Height, RGB(255,0,255));
 	Component_Render(_dc);
+}
+
+void Bullet::EnterCollision(Collider* _pOther)
+{
+	EventMgr::GetInst()->DeleteObject(this);
 }

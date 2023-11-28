@@ -4,23 +4,30 @@
 #include "Core.h"
 #include "Player.h"
 #include "Gun.h"
+#include "Cage.h"
 #include "Monster.h"
 #include "KeyMgr.h"
 #include "CollisionMgr.h"
 #include "ResMgr.h"
 #include "SceneMgr.h"
 #include "Texture.h"
+
 void Start_Scene::Init()
 {
-	Object* pObj = new Player;
-	pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
-	pObj->SetScale(Vec2(100.f,100.f));
-	AddObject(pObj, OBJECT_GROUP::PLAYER);
+	//Object* pObj = new Player;
+	//pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
+	//pObj->SetScale(Vec2(100.f,100.f));
+	//AddObject(pObj, OBJECT_GROUP::PLAYER);
 
 	Object* pGun = new Gun();
 	pGun->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2 })));
 	pGun->SetScale(Vec2(125.f, 35.f));
 	AddObject(pGun, OBJECT_GROUP::GUN);
+
+	Object* pCage = new Cage();
+	pCage->SetScale(Vec2(500.f, 500.f));
+	pCage->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2 + 125.f, Core::GetInst()->GetResolution().y / 2 + 125.f })));
+	AddObject(pCage, OBJECT_GROUP::CAGE );
 
 	// ���� ���� �������� ��ġ�� �غ��ô�.
 
@@ -50,6 +57,7 @@ void Start_Scene::Init()
 
 	// �浹üũ�ؾߵǴ°͵��� ��������.
 	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::BULLET, OBJECT_GROUP::MONSTER);
+	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::CAGE, OBJECT_GROUP::MONSTER);
 }
 
 void Start_Scene::Update()

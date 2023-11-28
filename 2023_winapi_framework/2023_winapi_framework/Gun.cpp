@@ -1,10 +1,14 @@
 #include "pch.h"
 #include "Gun.h"
+#include "Bullet.h"
 #include "Core.h"
 #include "KeyMgr.h"
+#include "SceneMgr.h"
+#include "Scene.h"
 #include "ResMgr.h"
 #include "Texture.h"
 #include "RotatableObject.h"
+#include<timeapi.h>
 
 Gun::Gun()
 {
@@ -34,6 +38,19 @@ Gun::~Gun()
 	DeleteDC(m_hbackDC);
 }
 
+void Gun::Update()
+{
+	RotatableObject::Update();
+	if (KEY_DOWN(KEY_TYPE::LBUTTON))
+	{
+		if (lastFireTime + CoolTime > timeGetTime()) return;
+		CreateBullet();
+		ResMgr::GetInst()->Play(L"Shoot");
+		lastFireTime = timeGetTime();
+	}
+
+}
+
 void Gun::Rotate(double angle)
 {
 	double deg = angle * 180 / PI;
@@ -53,10 +70,8 @@ void Gun::Rotate(double angle)
 
 	m_pPoint[0].x = (LONG)(vPos.x - vScale.x / 2);
 	m_pPoint[0].y = (LONG)(vPos.y - vScale.y / 2);
-
 	m_pPoint[1].x = (LONG)(vPos.x + vScale.x / 2);
 	m_pPoint[1].y = (LONG)(vPos.y - vScale.y / 2);
-
 	m_pPoint[2].x = (LONG)(vPos.x - vScale.x / 2);
 	m_pPoint[2].y = (LONG)(vPos.y + vScale.y / 2);
 
@@ -95,10 +110,8 @@ void Gun::Rotate(double angle)
 	 
 	m_pPoint[0].x = m_vRotatedDir[0].x + vScale.x / 2;
 	m_pPoint[0].y = m_vRotatedDir[0].y + vScale.x / 2;
-
 	m_pPoint[1].x = m_vRotatedDir[1].x + vScale.x / 2;
 	m_pPoint[1].y = m_vRotatedDir[1].y + vScale.x / 2;
-
 	m_pPoint[2].x = m_vRotatedDir[2].x + vScale.x / 2;
 	m_pPoint[2].y = m_vRotatedDir[2].y + vScale.x / 2;
 }
@@ -117,4 +130,13 @@ void Gun::Render(HDC _dc)
 
 void Gun::CreateBullet()
 {
+	Bullet* pBullet = new Bullet;
+	Vec2 vBulletPos = GetPos();
+	vBulletPos.y -= GetScale().y / 3.f;
+	pBullet->SetPos(vBulletPos);
+	pBullet->SetScale(Vec2(10.f, 10.f));
+	pBullet->SetSpeed(1000.f);
+	pBullet->SetDir(Vec2((float)cos(m_dAngle), (float)sin(m_dAngle)));
+	pBullet->SetName(L"Player_Bullet");
+	SceneMgr::GetInst()->GetCurScene()->AddObject(pBullet, OBJECT_GROUP::BULLET);
 }
