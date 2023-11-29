@@ -12,6 +12,7 @@ void CollisionMgr::Update()
 		{
 			if (m_arrCheck[Row] & (1 << Col))
 			{
+				if (Row == Col) continue;
 				CollisionGroupUpdate((OBJECT_GROUP)Row, (OBJECT_GROUP)Col);
 			}
 		}

@@ -19,7 +19,7 @@ public:
 	void Component_Render(HDC _dc);
 public:
 	virtual void SetPos(Vec2 _vPos) { m_vPos = _vPos; }
-	virtual void SetScale(Vec2 _vScale) { m_vScale = _vScale; }
+	virtual void SetScale(Vec2 _vScale);
 	const Vec2& GetPos() const { return m_vPos; }
 	const Vec2& GetScale() const { return m_vScale; }
 	Collider* GetCollider() const { return m_pCollider; }

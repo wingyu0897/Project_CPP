@@ -80,3 +80,12 @@ void Object::Component_Render(HDC _dc)
 
 }
 
+void Object::SetScale(Vec2 _vScale)
+{
+	m_vScale = _vScale;
+	if (GetCollider() != nullptr)
+	{
+		GetCollider()->SetScale(_vScale);
+	}
+}
+

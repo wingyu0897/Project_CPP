@@ -33,7 +33,7 @@ void Collider::Render(HDC _dc)
 	//Core::GetInst()->GetBrush(BRUSH_TYPE::HOLLOW);
 	//SelectObject();
 	PEN_TYPE ePen = PEN_TYPE::GREEN;
-	if (m_check)
+	if (m_check > 0)
 		ePen = PEN_TYPE::RED;
 	SelectGDI pen(_dc, ePen);
 	SelectGDI brush(_dc, BRUSH_TYPE::HOLLOW);

@@ -6,6 +6,7 @@
 #include "Gun.h"
 #include "Cage.h"
 #include "Monster.h"
+#include "SharkBase.h"
 #include "KeyMgr.h"
 #include "CollisionMgr.h"
 #include "ResMgr.h"
@@ -24,32 +25,17 @@ void Start_Scene::Init()
 	pGun->SetScale(Vec2(125.f, 35.f));
 	AddObject(pGun, OBJECT_GROUP::GUN);
 
+	Object* pShark = new SharkBase(Vec2(100, 100));
+	AddObject(pShark, OBJECT_GROUP::MONSTER);
+
 	Object* pCage = new Cage();
+	pCage->SetName(L"Cage");
 	pCage->SetScale(Vec2(500.f, 500.f));
 	pCage->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2 + 125.f, Core::GetInst()->GetResolution().y / 2 + 125.f })));
-	AddObject(pCage, OBJECT_GROUP::CAGE );
+	AddObject(pCage, OBJECT_GROUP::CAGE);
 
 	// ���� ���� �������� ��ġ�� �غ��ô�.
 
-	Vec2 vResolution = Core::GetInst()->GetResolution();
-	Monster* pMonster = nullptr;
-	int iMonster = 10;		// ���� �� 
-	float fMoveDist = 30.f; // ������ �Ÿ�
-	float fMonsterScale = 50.f; // ���� ũ��
-	// �ػ�x - ( ������ �Ÿ� + ������Ʈ ũ�� /2) * 2 / ���ͼ� -1 
-	float fTerm = (vResolution.x - (fMoveDist + fMonsterScale / 2.f) * 2) / (float)(iMonster -1);
-
-	for (int i = 0; i < iMonster; ++i)
-	{
-		pMonster = new Monster;
-		pMonster->SetPos(Vec2(
-			(fMoveDist + fMonsterScale / 2.f) + i* fTerm
-			,300.f));
-		pMonster->SetScale(Vec2(fMonsterScale, fMonsterScale));
-		pMonster->SetCenterPos(pMonster->GetPos());
-		pMonster->SetMoveDis(fMoveDist);
-		AddObject(pMonster, OBJECT_GROUP::MONSTER);
-	}
 	// ���� ����
 	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\Retro_bgm.wav", true);
 	ResMgr::GetInst()->LoadSound(L"Shoot", L"Sound\\laserShoot.wav", false);
@@ -57,7 +43,7 @@ void Start_Scene::Init()
 
 	// �浹üũ�ؾߵǴ°͵��� ��������.
 	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::BULLET, OBJECT_GROUP::MONSTER);
-	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::CAGE, OBJECT_GROUP::MONSTER);
+	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::MONSTER, OBJECT_GROUP::CAGE);
 }
 
 void Start_Scene::Update()

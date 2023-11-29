@@ -6,6 +6,7 @@
 
 RotatableObject::RotatableObject()
 {
+	Rotate(0);
 }
 
 RotatableObject::~RotatableObject()

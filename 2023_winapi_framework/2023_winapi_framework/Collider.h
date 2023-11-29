@@ -25,6 +25,7 @@ public:
 	{ return m_vFinalPos; }
 	const UINT& GetID() const { return m_ID; }
 	const Object* GetObj() const { return m_pOwner; }
+	const Object* GetOwner() const { return m_pOwner; }
 private:
 	UINT m_check;
 	Object* m_pOwner;
