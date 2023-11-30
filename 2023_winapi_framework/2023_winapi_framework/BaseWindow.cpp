@@ -22,7 +22,10 @@ int BaseWindow::Run(HINSTANCE _hInst, LPWSTR _lpCmdline, int _nCmdShow)
     this->WindowShow(_nCmdShow);
     this->WindowUpdate();
     // Init();
-    if (!Core::GetInst()->Init(m_hWnd, m_ptResolution))
+    POINT pt = POINT();
+    pt.x = GetSystemMetrics(SM_CXSCREEN);
+    pt.y = GetSystemMetrics(SM_CYSCREEN);
+    if (!Core::GetInst()->Init(m_hWnd, pt))
     {
         MessageBox(m_hWnd, L"Core �ʱ�ȭ ����", L"FAIL", MB_OK);
     }

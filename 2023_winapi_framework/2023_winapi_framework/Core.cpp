@@ -37,6 +37,19 @@ bool Core::Init(HWND _hWnd, POINT _ptResolution)
 	ResMgr::GetInst()->Init();
 	SceneMgr::GetInst()->Init();
 
+	int x, y, width, height;
+	RECT rtDesk, rtWindow;
+	GetWindowRect(GetDesktopWindow(), &rtDesk);
+	GetWindowRect(m_hWnd, &rtWindow);
+
+	width = rtWindow.right - rtWindow.left;
+	height = rtWindow.bottom - rtWindow.top;
+
+	x = (rtDesk.right - width) / 2;
+	y = (rtDesk.bottom - height) / 2;
+
+	MoveWindow(m_hWnd, x + 2, y, width, height, TRUE);
+
 	return true;
 }
 
@@ -122,6 +135,7 @@ void Core::CreateGDI()
 	m_arrBrush[(UINT)BRUSH_TYPE::GREEN] = (HBRUSH)CreateSolidBrush(RGB(134, 229, 134));
 	m_arrBrush[(UINT)BRUSH_TYPE::BLUE] = (HBRUSH)CreateSolidBrush(RGB(103, 153, 255));
 	m_arrBrush[(UINT)BRUSH_TYPE::YELLOW] = (HBRUSH)CreateSolidBrush(RGB(255, 187, 0));
+	m_arrBrush[(UINT)BRUSH_TYPE::BLACK] = (HBRUSH)CreateSolidBrush(RGB(0, 0, 0));
 
 	//RED GREEN BLUE PEN
 	m_arrPen[(UINT)PEN_TYPE::RED] = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));

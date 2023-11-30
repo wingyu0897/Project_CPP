@@ -89,24 +89,6 @@ void Gun::Rotate(double angle)
 		, m_vDir[1].x * (float)sin(angle) + m_vDir[1].y * (float)cos(angle));
 	m_vRotatedDir[2] = Vec2(m_vDir[2].x * (float)cos(angle) - m_vDir[2].y * (float)sin(angle)
 		, m_vDir[2].x * (float)sin(angle) + m_vDir[2].y * (float)cos(angle));
-
-	//m_pPoint[0].x = vPos.x + m_vRotatedDir[0].x;
-	//m_pPoint[0].y = vPos.y + m_vRotatedDir[0].y;
-
-	//m_pPoint[1].x = vPos.x + m_vRotatedDir[1].x;
-	//m_pPoint[1].y = vPos.y + m_vRotatedDir[1].y;
-
-	//m_pPoint[2].x = vPos.x + m_vRotatedDir[2].x;
-	//m_pPoint[2].y = vPos.y + m_vRotatedDir[2].y;
-
-	//m_pPoint[0].x = m_vRotatedDir[0].x + m_pTex->GetWidth() / 2;
-	//m_pPoint[0].y = m_vRotatedDir[0].y + m_pTex->GetWidth() / 2;
-
-	//m_pPoint[1].x = m_vRotatedDir[1].x + m_pTex->GetWidth() / 2;
-	//m_pPoint[1].y = m_vRotatedDir[1].y + m_pTex->GetWidth() / 2;
-
-	//m_pPoint[2].x = m_vRotatedDir[2].x + m_pTex->GetWidth() / 2;
-	//m_pPoint[2].y = m_vRotatedDir[2].y + m_pTex->GetWidth() / 2;
 	 
 	m_pPoint[0].x = m_vRotatedDir[0].x + vScale.x / 2;
 	m_pPoint[0].y = m_vRotatedDir[0].y + vScale.x / 2;
