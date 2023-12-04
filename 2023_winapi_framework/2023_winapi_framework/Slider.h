@@ -1,17 +1,21 @@
 #pragma once
-#include"Object.h"
-class Slider : public Object
+
+class Slider
 {
 public:
 	Slider();
 	~Slider();
 public:
-	void Update() override;
-	void Render(HDC _dc) override;
-	void SetMaxTime(float fMaxTime) { m_fMaxTime = fMaxTime; }
-	const float GetMaxTime() const { return m_fMaxTime; }
+	void Render(HDC _dc);
+	void SetPos(Vec2 vPos) { m_vPos = vPos; }
+	void SetScale(Vec2 vScale) { m_vScale = vScale; }
+	void SetPercent(float fPercent) { m_fPercent = fPercent; }
+	const Vec2 GetPos() const { return m_vPos; }
+	const Vec2 GetScale() const { return m_vScale; }
+	const float GetPercent() const { return m_fPercent; }
 private:
-	float m_fMaxTime;
-	float m_fCurrentTime;
+	Vec2 m_vPos;
+	Vec2 m_vScale;
+	float m_fPercent;
 };
 

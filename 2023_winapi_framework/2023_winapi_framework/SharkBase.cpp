@@ -34,9 +34,10 @@ SharkBase::SharkBase(Vec2 vStartPos)
 	Vec2 vScale = GetScale();
 	int Width = m_pTex->GetWidth();
 	int Height = m_pTex->GetHeight();
-	HBRUSH brush = Core::GetInst()->GetBrush(BRUSH_TYPE::BLACK);
-	SelectObject(m_hbackDC, brush); //select brush into DC
+	HBRUSH brush = Core::GetInst()->GetBrush(BRUSH_TYPE::PURPLE);
+	HBRUSH original = (HBRUSH)SelectObject(m_hbackDC, brush); //select brush into DC
 	Rectangle(m_hbackDC, -5, -5, m_pTex->GetWidth() + 10, m_pTex->GetWidth() + 10);
+	SelectObject(m_hbackDC, original);
 }
 
 SharkBase::~SharkBase()

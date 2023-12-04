@@ -62,6 +62,9 @@
     <Filter Include="Engine\08. Module">
       <UniqueIdentifier>{b8698270-780f-4bb6-bf63-bf69c99fa2ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager\SliderMgr">
+      <UniqueIdentifier>{58f0b3db-d8ea-43a3-8acc-7abe85c41bbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -166,8 +169,11 @@
     <ClInclude Include="SharkBase.h">
       <Filter>Engine\04. Object\MainObject</Filter>
     </ClInclude>
+    <ClInclude Include="SliderMgr.h">
+      <Filter>Engine\03. Manager\SliderMgr</Filter>
+    </ClInclude>
     <ClInclude Include="Slider.h">
-      <Filter>Engine\04. Object\MainObject</Filter>
+      <Filter>Engine\07. Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -268,8 +274,11 @@
     <ClCompile Include="SharkBase.cpp">
       <Filter>Engine\04. Object\MainObject</Filter>
     </ClCompile>
+    <ClCompile Include="SliderMgr.cpp">
+      <Filter>Engine\03. Manager\SliderMgr</Filter>
+    </ClCompile>
     <ClCompile Include="Slider.cpp">
-      <Filter>Engine\04. Object\MainObject</Filter>
+      <Filter>Engine\07. Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

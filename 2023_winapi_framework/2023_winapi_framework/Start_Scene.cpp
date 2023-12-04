@@ -8,7 +8,9 @@
 #include "Monster.h"
 #include "SharkBase.h"
 #include "KeyMgr.h"
+#include "SliderMgr.h"
 #include "CollisionMgr.h"
+#include "TimeMgr.h"
 #include "ResMgr.h"
 #include "Slider.h"
 #include "SceneMgr.h"
@@ -16,6 +18,7 @@
 
 void Start_Scene::Init()
 {
+	m_fMaxTime = 150.f;
 	//Object* pObj = new Player;
 	//pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
 	//pObj->SetScale(Vec2(100.f,100.f));
@@ -36,10 +39,11 @@ void Start_Scene::Init()
 	AddObject(pCage, OBJECT_GROUP::CAGE);
 
 	Slider* pSlider = new Slider();
-	pSlider->SetMaxTime(150.f);
 	pSlider->SetPos(Vec2({ 50, Core::GetInst()->GetResolution().y / 2 }));
 	pSlider->SetScale(Vec2(30, 500));
-	AddObject(pSlider, OBJECT_GROUP::UI);
+	pSlider->SetPercent(0.5f);
+	SliderMgr::GetInst()->AddSlider(L"Slider1", pSlider);
+	m_pSlider = pSlider;
 
 	// ���� ����
 	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\Retro_bgm.wav", true);
@@ -54,6 +58,9 @@ void Start_Scene::Init()
 void Start_Scene::Update()
 {
 	Scene::Update();
+	m_fCurrentTime += fDT;
+	float percent = m_fCurrentTime / m_fMaxTime;
+	m_pSlider->SetPercent(percent);
 }
 
 void Start_Scene::Render(HDC _dc)

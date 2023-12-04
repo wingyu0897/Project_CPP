@@ -6,6 +6,7 @@
 #include "PathMgr.h"
 #include "ResMgr.h"
 #include "CollisionMgr.h"
+#include "SliderMgr.h"
 #include "EventMgr.h"
 bool Core::Init(HWND _hWnd, POINT _ptResolution)
 {
@@ -106,6 +107,7 @@ void Core::Render()
 	Rectangle(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y);
 
 	SceneMgr::GetInst()->Render(m_hbackDC);
+	SliderMgr::GetInst()->Render(m_hbackDC);
 	/*Vec2 vPos = m_obj.GetPos();
 	Vec2 vScale = m_obj.GetScale();
 	RECT_RENDER(vPos.x, vPos.y, vScale.x, vScale.y, m_hbackDC);*/
@@ -140,6 +142,7 @@ void Core::CreateGDI()
 	m_arrBrush[(UINT)BRUSH_TYPE::YELLOW] = (HBRUSH)CreateSolidBrush(RGB(255, 187, 0));
 	m_arrBrush[(UINT)BRUSH_TYPE::BLACK] = (HBRUSH)CreateSolidBrush(RGB(0, 0, 0));
 	m_arrBrush[(UINT)BRUSH_TYPE::SEABLUE] = (HBRUSH)CreateSolidBrush(RGB(5, 5, 30));
+	m_arrBrush[(UINT)BRUSH_TYPE::PURPLE] = (HBRUSH)CreateSolidBrush(RGB(255, 0, 255));
 
 	//RED GREEN BLUE PEN
 	m_arrPen[(UINT)PEN_TYPE::RED] = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
