@@ -28,6 +28,7 @@ enum class OBJECT_GROUP
 	BULLET,
 	MONSTER,
 	CAGE,
+	UI,
 	END = 30
 };
 
@@ -40,7 +41,7 @@ enum class PEN_TYPE
 enum class BRUSH_TYPE
 {
 	HOLLOW, RED, GREEN,
-	BLUE, YELLOW, BLACK, END
+	BLUE, YELLOW, BLACK, SEABLUE, END
 };
 
 enum class EVENT_TYPE

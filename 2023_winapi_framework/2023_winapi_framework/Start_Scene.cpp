@@ -10,6 +10,7 @@
 #include "KeyMgr.h"
 #include "CollisionMgr.h"
 #include "ResMgr.h"
+#include "Slider.h"
 #include "SceneMgr.h"
 #include "Texture.h"
 
@@ -34,7 +35,11 @@ void Start_Scene::Init()
 	pCage->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2 + 125.f, Core::GetInst()->GetResolution().y / 2 + 125.f })));
 	AddObject(pCage, OBJECT_GROUP::CAGE);
 
-	// ���� ���� �������� ��ġ�� �غ��ô�.
+	Slider* pSlider = new Slider();
+	pSlider->SetMaxTime(150.f);
+	pSlider->SetPos(Vec2({ 50, Core::GetInst()->GetResolution().y / 2 }));
+	pSlider->SetScale(Vec2(30, 500));
+	AddObject(pSlider, OBJECT_GROUP::UI);
 
 	// ���� ����
 	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\Retro_bgm.wav", true);

@@ -14,11 +14,14 @@ SharkBase::SharkBase(Vec2 vStartPos)
 {
 	m_pTex = ResMgr::GetInst()->TexLoad(L"Shark", L"Texture\\Shark1.bmp");
 	CreateCollider();
+
 	SetPos(vStartPos);
 	SetScale(Vec2(200.f, 90.f));
 	Vec2 centerPos = Vec2(vStartPos.x - (float)Core::GetInst()->GetResolution().x / 2, vStartPos.y - (float)Core::GetInst()->GetResolution().y / 2);
-	SetDir(Vec2(1, 1));
-	GetCollider()->SetScale(Vec2(GetScale().y, GetScale().y));
+	SetDir(Vec2(-centerPos.x, -centerPos.y));
+	GetCollider()->SetScale(Vec2(GetScale().y * 1.2f, GetScale().y * 1.2f));
+	double angle = atan2(-centerPos.y, -centerPos.x);
+	Rotate(angle);
 
 	m_hMembit = CreateCompatibleBitmap(Core::GetInst()->GetMainDC(), m_pTex->GetWidth(), m_pTex->GetWidth());
 	m_hMemDC = CreateCompatibleDC(Core::GetInst()->GetMainDC());
@@ -51,7 +54,6 @@ void SharkBase::Update()
 		vCurPos.y += m_fSpeed * fDT * m_vMoveDir.y;
 		SetPos(vCurPos);
 	}
-	Rotate(45 * PI / 180);
 }
 
 void SharkBase::Render(HDC _dc)
