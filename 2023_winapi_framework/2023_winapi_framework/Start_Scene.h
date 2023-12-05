@@ -13,5 +13,6 @@ private:
     float m_fMaxTime;
     float m_fCurrentTime;
     Slider *m_pSlider;
+    DWORD lastSpawnTime;
 };
 

@@ -8,7 +8,7 @@
 #include "EventMgr.h"
 
 SharkBase::SharkBase(Vec2 vStartPos)
-	: m_fSpeed(50.f)
+	: m_fSpeed(100.f)
 	, m_bMove(true)
 	, m_iHp(1)
 {

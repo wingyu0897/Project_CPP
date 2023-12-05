@@ -19,6 +19,7 @@
 void Start_Scene::Init()
 {
 	m_fMaxTime = 150.f;
+	lastSpawnTime = 0;
 	//Object* pObj = new Player;
 	//pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
 	//pObj->SetScale(Vec2(100.f,100.f));
@@ -61,6 +62,16 @@ void Start_Scene::Update()
 	m_fCurrentTime += fDT;
 	float percent = m_fCurrentTime / m_fMaxTime;
 	m_pSlider->SetPercent(percent);
+
+	if (percent < 0.1f)
+	{
+		if (lastSpawnTime + 3000.f < timeGetTime())
+		{
+			Object* pShark = new SharkBase(Vec2(-100, -100));
+			AddObject(pShark, OBJECT_GROUP::MONSTER);
+			lastSpawnTime = timeGetTime();
+		}
+	}
 }
 
 void Start_Scene::Render(HDC _dc)
