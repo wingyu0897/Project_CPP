@@ -9,6 +9,7 @@ Object::Object()
 	, m_vPos{}
 	, m_vScale{}
 	, m_IsAlive(true)
+	, m_IsCollision(true)
 	, m_pAnimator(nullptr)
 {
 }
@@ -26,6 +27,13 @@ void Object::CreateCollider()
 {
 	m_pCollider = new Collider;
 	m_pCollider->m_pOwner = this;
+}
+
+void Object::DeleteCollider()
+{
+	if (m_pCollider != nullptr)
+	{
+	}
 }
 
 void Object::CreateAnimator()

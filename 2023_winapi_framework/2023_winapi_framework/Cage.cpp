@@ -3,6 +3,7 @@
 #include "Texture.h"
 #include "ResMgr.h"
 #include "Collider.h"
+#include "SceneMgr.h"
 
 Cage::Cage()
 	: m_iHp(100)
@@ -49,7 +50,7 @@ void Cage::SetScale(Vec2 vScale)
 
 void Cage::EnterCollision(Collider* _pOther)
 {
-
+	//SceneMgr::GetInst()->LoadScene(L"Game_Scene");
 }
 
 void Cage::ExitCollision(Collider* _pOther)

@@ -16,8 +16,11 @@ public:
 
 public:
 	void SetDir(Vec2 _dir) { m_vMoveDir = _dir.Normalize(); }
+	const Vec2 GetDir() const { return m_vMoveDir; }
 	void SetSpeed(float _f) { m_fSpeed = _f; }
 	const float& GetSpeed() const { return m_fSpeed; }
+	void SetHP(int hp) { m_iHp = hp; }
+	const int GetHP() const { return m_iHp; }
 private:
 	HDC m_hMemDC;
 	HBITMAP m_hMembit;

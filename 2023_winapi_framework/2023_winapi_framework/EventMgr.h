@@ -17,5 +17,6 @@ private:
 private:
 	vector<tEvent> m_vecEvent;
 	vector<Object*> m_vecDead;
+	bool isEvented = false;
 };
 

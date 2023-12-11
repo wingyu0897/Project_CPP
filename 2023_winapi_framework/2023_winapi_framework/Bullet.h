@@ -27,5 +27,6 @@ private:
     Vec2 m_vDir;
     Texture* m_pTex;
     float m_fSpeed;
+    bool m_bIsDead;
 };
 

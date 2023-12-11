@@ -27,7 +27,7 @@ void CollisionMgr::CollisionGroupUpdate(OBJECT_GROUP _eLeft, OBJECT_GROUP _eRigh
 	for (size_t i = 0; i < vecLeft.size(); ++i)
 	{
 		// 충돌체가 없는 경우
-		if (vecLeft[i]->GetCollider() == nullptr)
+		if (vecLeft[i]->GetCollider() == nullptr || !vecLeft[i]->GetIsCollision())
 			continue;
 		for (size_t j = 0; j < vecRight.size(); ++j)
 		{
@@ -72,7 +72,8 @@ void CollisionMgr::CollisionGroupUpdate(OBJECT_GROUP _eLeft, OBJECT_GROUP _eRigh
 				// 이전에 충돌x
 				else
 				{
-					//if()
+					if ((pLeftCol->GetIsCollision() && pLeftCol->GetSingleCollision()) 
+						|| (pRightCol->GetIsCollision() && pRightCol->GetSingleCollision())) continue;
 					pLeftCol->EnterCollision(pRightCol);
 					pRightCol->EnterCollision(pLeftCol);
 					iter->second = true;

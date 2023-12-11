@@ -7,6 +7,8 @@
 #include "Cage.h"
 #include "Monster.h"
 #include "SharkBase.h"
+#include "SpeedShark.h"
+#include "SpinningShark.h"
 #include "KeyMgr.h"
 #include "SliderMgr.h"
 #include "CollisionMgr.h"
@@ -30,7 +32,7 @@ void Start_Scene::Init()
 	pGun->SetScale(Vec2(125.f, 35.f));
 	AddObject(pGun, OBJECT_GROUP::GUN);
 
-	Object* pShark = new SharkBase(Vec2(100, 100));
+	Object* pShark = new SpinningShark(Vec2(200, 200));
 	AddObject(pShark, OBJECT_GROUP::MONSTER);
 
 	Object* pCage = new Cage();
@@ -63,13 +65,44 @@ void Start_Scene::Update()
 	float percent = m_fCurrentTime / m_fMaxTime;
 	m_pSlider->SetPercent(percent);
 
-	if (percent < 0.1f)
+	Vec2 center = Vec2({ Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2 });
+
+	if (percent < 1.f)
 	{
 		if (lastSpawnTime + 3000.f < timeGetTime())
 		{
-			Object* pShark = new SharkBase(Vec2(-100, -100));
+			int x = (rand() % 201) - 100;
+			int y = (rand() % 201) - 100;
+			Vec2 pos = Vec2(x, y).Normalize();
+			pos.x = pos.x * 1000 + center.x;
+			pos.y = pos.y * 1000 + center.y;
+			Object* pShark = new SharkBase(pos);
 			AddObject(pShark, OBJECT_GROUP::MONSTER);
 			lastSpawnTime = timeGetTime();
+			if (percent > 0.2f)
+			{
+				int r = rand() % 1001;
+				if (r < 500)
+				{
+					int x = (rand() % 201) - 100;
+					int y = (rand() % 201) - 100;
+					Vec2 pos = Vec2(x, y).Normalize();
+					pos.x = pos.x * 1000 + center.x;
+					pos.y = pos.y * 1000 + center.y;
+					Object* pShark = new SpeedShark(pos);
+					AddObject(pShark, OBJECT_GROUP::MONSTER);
+				}
+				if (r < 200)
+				{
+					int x = (rand() % 201) - 100;
+					int y = (rand() % 201) - 100;
+					Vec2 pos = Vec2(x, y).Normalize();
+					pos.x = pos.x * 1000 + center.x;
+					pos.y = pos.y * 1000 + center.y;
+					Object* pShark = new SpinningShark(pos);
+					AddObject(pShark, OBJECT_GROUP::MONSTER);
+				}
+			}
 		}
 	}
 }
@@ -77,6 +110,7 @@ void Start_Scene::Update()
 void Start_Scene::Render(HDC _dc)
 {
 	Scene::Render(_dc);
+	SliderMgr::GetInst()->Render(_dc);
 }
 
 void Start_Scene::Release()

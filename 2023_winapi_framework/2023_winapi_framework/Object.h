@@ -27,11 +27,14 @@ public:
 	const wstring& GetName() const { return m_strName; }
 	void SetName(wstring _name) { m_strName = _name; }
 	bool GetIsDead() const { return !m_IsAlive; }
-private:
+	bool GetIsCollision() const { return m_IsCollision; }
+protected:
 	void SetDead() { m_IsAlive = false; }
+	void SetCollision(bool value) { m_IsCollision = value; }
 	friend class EventMgr;
 public:
 	void CreateCollider();
+	void DeleteCollider();
 	void CreateAnimator();
 private:
 	Vec2 m_vPos; // 위치
@@ -39,6 +42,7 @@ private:
 	Collider* m_pCollider;
 	wstring m_strName; // 이름.
 	bool m_IsAlive;
+	bool m_IsCollision;
 	Animator* m_pAnimator;
 };
 

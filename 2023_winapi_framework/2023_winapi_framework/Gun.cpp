@@ -45,7 +45,7 @@ void Gun::Update()
 	{
 		if (lastFireTime + CoolTime > timeGetTime()) return;
 		CreateBullet();
-		ResMgr::GetInst()->Play(L"Shoot");
+		//ResMgr::GetInst()->Play(L"Shoot");
 		lastFireTime = timeGetTime();
 	}
 
@@ -117,7 +117,7 @@ void Gun::CreateBullet()
 	vBulletPos.y -= GetScale().y / 3.f;
 	pBullet->SetPos(vBulletPos);
 	pBullet->SetScale(Vec2(10.f, 10.f));
-	pBullet->SetSpeed(1000.f);
+	pBullet->SetSpeed(2000.f);
 	pBullet->SetDir(Vec2((float)cos(m_dAngle), (float)sin(m_dAngle)));
 	pBullet->SetName(L"Player_Bullet");
 	SceneMgr::GetInst()->GetCurScene()->AddObject(pBullet, OBJECT_GROUP::BULLET);

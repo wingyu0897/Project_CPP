@@ -9,6 +9,8 @@ Collider::Collider()
 	, m_ID(m_sNextID++)
 	, m_check(0)
 	, m_vFinalPos{}
+	, m_bCollision(false)
+	, m_bSingleCollision(false)
 {
 	//Collider a, b;
 	//a = b;
@@ -21,6 +23,8 @@ Collider::Collider(const Collider& _origin)
 	, m_ID(m_sNextID++)
 	, m_check(0)
 	, m_vFinalPos{}
+	, m_bCollision(false)
+	, m_bSingleCollision(false)
 {
 }
 
@@ -44,12 +48,14 @@ void Collider::EnterCollision(Collider* _pOther)
 {
  	++m_check;
 	m_pOwner->EnterCollision(_pOther);
+	m_bCollision = true;
 }
 
 void Collider::ExitCollision(Collider* _pOther)
 {
 	--m_check;
 	m_pOwner->ExitCollision(_pOther);
+	m_bCollision = false;
 }
 
 void Collider::StayCollision(Collider* _pOther)

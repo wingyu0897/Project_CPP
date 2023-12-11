@@ -107,7 +107,6 @@ void Core::Render()
 	Rectangle(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y);
 
 	SceneMgr::GetInst()->Render(m_hbackDC);
-	SliderMgr::GetInst()->Render(m_hbackDC);
 	/*Vec2 vPos = m_obj.GetPos();
 	Vec2 vScale = m_obj.GetScale();
 	RECT_RENDER(vPos.x, vPos.y, vScale.x, vScale.y, m_hbackDC);*/

@@ -5,8 +5,8 @@ void EventMgr::Update()
 {
 	for (size_t i = 0; i < m_vecDead.size(); ++i)
 	{
-		if (m_vecDead[i] != nullptr)
-			delete m_vecDead[i];
+		//throw new std::exception("" + m_vecDead.size());
+		delete m_vecDead[i];
 	}
 	m_vecDead.clear();
 
@@ -32,6 +32,7 @@ void EventMgr::Excute(const tEvent& _eve)
 	case EVENT_TYPE::DELETE_OBJECT:
 	{
 		Object* pDeadObj = _eve.Obj;
+		if (pDeadObj == nullptr) break;
 		pDeadObj->SetDead();
 		m_vecDead.push_back(pDeadObj);
 	}
