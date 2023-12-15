@@ -17,4 +17,5 @@ public:
 private:
 	Texture* m_pTex;
 	int m_iHp; // Ã¼·Â
+	int m_iMaxHP;
 };

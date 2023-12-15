@@ -21,6 +21,8 @@ public:
 	const float& GetSpeed() const { return m_fSpeed; }
 	void SetHP(int hp) { m_iHp = hp; }
 	const int GetHP() const { return m_iHp; }
+	void SetDamage(int damage) { m_iDamage = damage; }
+	const int GetDamage() const { return m_iDamage; }
 private:
 	HDC m_hMemDC;
 	HBITMAP m_hMembit;
@@ -30,5 +32,6 @@ private:
 	bool m_bMove;
 	float m_fSpeed; // 몬스터 스피드
 	int m_iHp; // 체력
+	int m_iDamage; // 공격력
 };
 

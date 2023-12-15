@@ -4,12 +4,17 @@
 #include "ResMgr.h"
 #include "Collider.h"
 #include "SceneMgr.h"
+#include "SliderMgr.h"
+#include "Slider.h"
+#include "SharkBase.h"
+#include "Object.h"
 
 Cage::Cage()
-	: m_iHp(100)
+	: m_iMaxHP(100)
 {
 	m_pTex = ResMgr::GetInst()->TexLoad(L"Cage", L"Texture\\Cage.bmp");
 	CreateCollider();
+	m_iHp = m_iMaxHP;
 }
 
 Cage::~Cage()
@@ -51,6 +56,9 @@ void Cage::SetScale(Vec2 vScale)
 void Cage::EnterCollision(Collider* _pOther)
 {
 	//SceneMgr::GetInst()->LoadScene(L"Game_Scene");
+	SharkBase* shark = (SharkBase*)(_pOther->GetOwner());
+	m_iHp -= shark->GetDamage();
+	SliderMgr::GetInst()->GetSlider(L"Slider2")->SetPercent((float)m_iHp / m_iMaxHP);
 }
 
 void Cage::ExitCollision(Collider* _pOther)

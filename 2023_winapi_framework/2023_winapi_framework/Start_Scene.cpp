@@ -20,7 +20,7 @@
 
 void Start_Scene::Init()
 {
-	m_fMaxTime = 150.f;
+	m_fMaxTime = 60.f;
 	lastSpawnTime = 0;
 	//Object* pObj = new Player;
 	//pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
@@ -47,6 +47,13 @@ void Start_Scene::Init()
 	pSlider->SetPercent(0.5f);
 	SliderMgr::GetInst()->AddSlider(L"Slider1", pSlider);
 	m_pSlider = pSlider;
+
+	Slider* pSlider2 = new Slider();
+	pSlider2->SetPos(Vec2({ Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y - 30 }));
+	pSlider2->SetScale(Vec2(Core::GetInst()->GetResolution().x, 30));
+	pSlider2->SetPercent(1.f);
+	pSlider2->IsHorizontal(true);
+	SliderMgr::GetInst()->AddSlider(L"Slider2", pSlider2);
 
 	// ���� ����
 	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\Retro_bgm.wav", true);

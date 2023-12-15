@@ -9,6 +9,7 @@ SpinningShark::SpinningShark(Vec2 pos)
 {
 	SetHP(1);
 	SetSpeed(1500.f);
+	SetDamage(10);
 }
 
 SpinningShark::~SpinningShark()

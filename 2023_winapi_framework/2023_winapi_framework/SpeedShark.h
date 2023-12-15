@@ -7,5 +7,9 @@ public:
 
 public:
 	void EnterCollision(Collider* _pOther) override;
+	void Update() override;
+private:
+	DWORD hitTime;
+	bool isHit;
 };
 

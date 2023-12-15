@@ -8,9 +8,10 @@
 #include "EventMgr.h"
 
 SharkBase::SharkBase(Vec2 vStartPos)
-	: m_fSpeed(100.f)
+	: m_fSpeed(200.f)
 	, m_bMove(true)
 	, m_iHp(1)
+	, m_iDamage(5)
 {
 	m_pTex = ResMgr::GetInst()->TexLoad(L"Shark", L"Texture\\Shark1.bmp");
 	CreateCollider();
