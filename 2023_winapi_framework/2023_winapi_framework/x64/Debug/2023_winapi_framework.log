@@ -1,1 +1,193 @@
-﻿  2023_winapi_framework.vcxproj -> D:\Github\Project_CPP\2023_winapi_framework\Output\bin_debug\2023_winapi_framework.exe
+﻿  Animation.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Animator.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  BaseWindow.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\BaseWindow.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Bullet.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Button.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Button.cpp(25,84): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Button.cpp(25,74): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Button.cpp(25,52): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Button.cpp(25,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ButtonMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Cage.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Collider.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  CollisionMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Core.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  EventMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  GameOver_Scene.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\GameOver_Scene.cpp(35,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\GameOver_Scene.cpp(35,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Game_Scene.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Gun.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Gun.cpp(93,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Gun.cpp(94,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Gun.cpp(95,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Gun.cpp(96,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Gun.cpp(97,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Gun.cpp(98,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KeyMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  main.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Menu_Scene.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Menu_Scene.cpp(42,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Menu_Scene.cpp(42,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Menu_Scene.cpp(44,49): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Menu_Scene.cpp(44,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Monster.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Object.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  PathMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Player.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Player.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  QuitButton.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Res.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  ResMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(2541,23): warning C4244: '인수': '_Elem'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=wchar_t
+          ]
+          and
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(2552): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(2552): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(2532): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(2532): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(3260): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<wchar_t*,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *,
+              _Alloc=std::allocator<char>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(3260): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<wchar_t*,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *,
+              _Alloc=std::allocator<char>
+          ]
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.cpp(77): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::assign<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(const _Iter,const _Iter)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>
+          ]
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.cpp(77): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::assign<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(const _Iter,const _Iter)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>
+          ]
+  RotatableObject.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(20,22): warning C4244: '-=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(21,22): warning C4244: '-=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(62,25): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(63,25): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(65,25): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(66,25): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(68,25): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\RotatableObject.cpp(69,25): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Scene.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  SceneMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SceneMgr.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  SelectGDI.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  SharkBase.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SharkBase.cpp(102,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SharkBase.cpp(103,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SharkBase.cpp(104,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SharkBase.cpp(105,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SharkBase.cpp(106,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\SharkBase.cpp(107,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Slider.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  SliderMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  SpeedShark.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  SpinningShark.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Start_Scene.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\ResMgr.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Start_Scene.cpp(25,18): warning C4244: '=': 'float'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Texture.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  TimeMgr.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\Core.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Vec2.cpp
+D:\Github\Project_CPP\2023_winapi_framework\2023_winapi_framework\enums.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  2023_winapi_framework.vcxproj -> D:\Github\Project_CPP\2023_winapi_framework\Output\bin_debug\2023_winapi_framework.exe

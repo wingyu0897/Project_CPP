@@ -22,6 +22,8 @@ void Start_Scene::Init()
 {
 	m_fMaxTime = 60.f;
 	lastSpawnTime = 0;
+	spawnCoolTime = 3000.f;
+	m_fCurrentTime = 0;
 	//Object* pObj = new Player;
 	//pObj->SetPos((Vec2({Core::GetInst()->GetResolution().x /2, Core::GetInst()->GetResolution().y / 2})));
 	//pObj->SetScale(Vec2(100.f,100.f));
@@ -32,7 +34,7 @@ void Start_Scene::Init()
 	pGun->SetScale(Vec2(125.f, 35.f));
 	AddObject(pGun, OBJECT_GROUP::GUN);
 
-	Object* pShark = new SpinningShark(Vec2(200, 200));
+	Object* pShark = new SpinningShark(Vec2(-200, -200));
 	AddObject(pShark, OBJECT_GROUP::MONSTER);
 
 	Object* pCage = new Cage();
@@ -57,9 +59,9 @@ void Start_Scene::Init()
 
 	// ���� ����
 	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\Retro_bgm.wav", true);
-	ResMgr::GetInst()->LoadSound(L"Shoot", L"Sound\\laserShoot.wav", false);
+	ResMgr::GetInst()->LoadSound(L"Shoot", L"Sound\\Shoot.wav", false);
 	//ResMgr::GetInst()->Play(L"BGM");
-
+	ResMgr::GetInst()->Volume(SOUND_CHANNEL::BGM, 0.2f);
 	// �浹üũ�ؾߵǴ°͵��� ��������.
 	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::BULLET, OBJECT_GROUP::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(OBJECT_GROUP::MONSTER, OBJECT_GROUP::CAGE);
@@ -76,7 +78,7 @@ void Start_Scene::Update()
 
 	if (percent < 1.f)
 	{
-		if (lastSpawnTime + 3000.f < timeGetTime())
+		if (lastSpawnTime + spawnCoolTime < timeGetTime())
 		{
 			int x = (rand() % 201) - 100;
 			int y = (rand() % 201) - 100;
@@ -110,12 +112,19 @@ void Start_Scene::Update()
 					AddObject(pShark, OBJECT_GROUP::MONSTER);
 				}
 			}
+			spawnCoolTime -= 1000;
+			spawnCoolTime = spawnCoolTime < 1350 ? 1350 : spawnCoolTime;
 		}
+	}
+	else
+	{
+		SceneMgr::GetInst()->LoadScene(L"GameOver_Scene");
 	}
 }
 
 void Start_Scene::Render(HDC _dc)
 {
+	Rectangle(_dc, 0, 0, Core::GetInst()->GetResolution().x, Core::GetInst()->GetResolution().y);
 	Scene::Render(_dc);
 	SliderMgr::GetInst()->Render(_dc);
 }

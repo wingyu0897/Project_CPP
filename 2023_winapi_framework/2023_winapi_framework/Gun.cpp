@@ -112,6 +112,7 @@ void Gun::Render(HDC _dc)
 
 void Gun::CreateBullet()
 {
+	ResMgr::GetInst()->Play(L"Shoot");
 	Bullet* pBullet = new Bullet;
 	Vec2 vBulletPos = GetPos();
 	vBulletPos.y -= GetScale().y / 3.f;

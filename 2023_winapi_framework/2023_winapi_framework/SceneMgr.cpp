@@ -2,15 +2,19 @@
 #include "SceneMgr.h"
 #include "Start_Scene.h"
 #include "Game_Scene.h"
+#include "Menu_Scene.h"
+#include "GameOver_Scene.h"
 void SceneMgr::Init()
 {
 	m_pCurScene = nullptr;
 	// �� ���
 	RegisterScene(L"Start_Scene",std::make_shared<Start_Scene>());
 	RegisterScene(L"Game_Scene", std::make_shared<Game_Scene>());
+	RegisterScene(L"Menu_Scene", std::make_shared<Menu_Scene>());
+	RegisterScene(L"GameOver_Scene", std::make_shared<GameOver_Scene>());
 
 	// ù �� ����
-	LoadScene(L"Start_Scene");
+	LoadScene(L"Menu_Scene");
 }
 
 void SceneMgr::Update()

@@ -68,6 +68,9 @@
     <Filter Include="Engine\04. Object\MainObject\Sharks">
       <UniqueIdentifier>{76d031c8-9ddc-476b-88a9-9f2aee065103}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager\ButtonMgr">
+      <UniqueIdentifier>{5c3df6bf-8e19-4a1a-9fa7-00f424410349}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -184,6 +187,21 @@
     <ClInclude Include="SpinningShark.h">
       <Filter>Engine\04. Object\MainObject\Sharks</Filter>
     </ClInclude>
+    <ClInclude Include="Menu_Scene.h">
+      <Filter>Engine\05. Scene\MainScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonMgr.h">
+      <Filter>Engine\03. Manager\ButtonMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Engine\07. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="QuitButton.h">
+      <Filter>Engine\07. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver_Scene.h">
+      <Filter>Engine\05. Scene\MainScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="2023_winapi_framework.rc">
@@ -294,6 +312,21 @@
     </ClCompile>
     <ClCompile Include="SpinningShark.cpp">
       <Filter>Engine\04. Object\MainObject\Sharks</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu_Scene.cpp">
+      <Filter>Engine\05. Scene\MainScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonMgr.cpp">
+      <Filter>Engine\03. Manager\ButtonMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Engine\07. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="QuitButton.cpp">
+      <Filter>Engine\07. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver_Scene.cpp">
+      <Filter>Engine\05. Scene\MainScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

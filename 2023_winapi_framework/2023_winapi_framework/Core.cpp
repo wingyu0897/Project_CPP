@@ -7,6 +7,7 @@
 #include "ResMgr.h"
 #include "CollisionMgr.h"
 #include "SliderMgr.h"
+#include "ButtonMgr.h"
 #include "EventMgr.h"
 bool Core::Init(HWND _hWnd, POINT _ptResolution)
 {
@@ -78,6 +79,7 @@ void Core::Update()
 	KeyMgr::GetInst()->Update();
 	SceneMgr::GetInst()->Update();
 	CollisionMgr::GetInst()->Update();
+	ButtonMgr::GetInst()->Update();
 //	Vec2 vPos = m_obj.GetPos();
 //
 ////	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
@@ -102,9 +104,8 @@ void Core::Render()
 {
 	// ĥ�Ѵ�.
 	//Rectangle(m_hbackDC, -1,-1,m_ptResolution.x +1,m_ptResolution.y + 1);
-	//PatBlt(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y, BLACKNESS);
+	PatBlt(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y, WHITENESS);
 
-	Rectangle(m_hbackDC, 0, 0, m_ptResolution.x, m_ptResolution.y);
 
 	SceneMgr::GetInst()->Render(m_hbackDC);
 	/*Vec2 vPos = m_obj.GetPos();
@@ -142,6 +143,7 @@ void Core::CreateGDI()
 	m_arrBrush[(UINT)BRUSH_TYPE::BLACK] = (HBRUSH)CreateSolidBrush(RGB(0, 0, 0));
 	m_arrBrush[(UINT)BRUSH_TYPE::SEABLUE] = (HBRUSH)CreateSolidBrush(RGB(5, 5, 30));
 	m_arrBrush[(UINT)BRUSH_TYPE::PURPLE] = (HBRUSH)CreateSolidBrush(RGB(255, 0, 255));
+	m_arrBrush[(UINT)BRUSH_TYPE::WHITE] = (HBRUSH)CreateSolidBrush(RGB(255, 255, 255));
 
 	//RED GREEN BLUE PEN
 	m_arrPen[(UINT)PEN_TYPE::RED] = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));

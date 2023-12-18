@@ -15,7 +15,7 @@ public:
 private:
     void CreateBullet();
 private:
-	const DWORD CoolTime = 1000;
+	const DWORD CoolTime = 400;
 private:
 	HDC m_hMemDC;
 	HBITMAP m_hMembit;

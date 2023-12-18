@@ -14,5 +14,6 @@ private:
     float m_fCurrentTime;
     Slider *m_pSlider;
     DWORD lastSpawnTime;
+    DWORD spawnCoolTime;
 };
 

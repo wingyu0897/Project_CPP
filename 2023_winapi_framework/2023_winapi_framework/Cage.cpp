@@ -38,7 +38,6 @@ void Cage::Render(HDC _dc)
 		, (int)(vPos.y - vScale.y / 2)
 		, Width, Height, m_pTex->GetDC()
 		, 0, 0, Width, Height, RGB(255, 0, 255));
-	Component_Render(_dc);
 }
 
 void Cage::SetPos(Vec2 vPos)
@@ -55,10 +54,13 @@ void Cage::SetScale(Vec2 vScale)
 
 void Cage::EnterCollision(Collider* _pOther)
 {
-	//SceneMgr::GetInst()->LoadScene(L"Game_Scene");
 	SharkBase* shark = (SharkBase*)(_pOther->GetOwner());
 	m_iHp -= shark->GetDamage();
 	SliderMgr::GetInst()->GetSlider(L"Slider2")->SetPercent((float)m_iHp / m_iMaxHP);
+	if (m_iHp <= 0)
+	{
+		SceneMgr::GetInst()->LoadScene(L"Menu_Scene");
+	}
 }
 
 void Cage::ExitCollision(Collider* _pOther)

@@ -35,7 +35,7 @@ SharkBase::SharkBase(Vec2 vStartPos)
 	Vec2 vScale = GetScale();
 	int Width = m_pTex->GetWidth();
 	int Height = m_pTex->GetHeight();
-	HBRUSH brush = Core::GetInst()->GetBrush(BRUSH_TYPE::PURPLE);
+	HBRUSH brush = Core::GetInst()->GetBrush(BRUSH_TYPE::BLACK);
 	HBRUSH original = (HBRUSH)SelectObject(m_hbackDC, brush); //select brush into DC
 	Rectangle(m_hbackDC, -5, -5, m_pTex->GetWidth() + 10, m_pTex->GetWidth() + 10);
 	SelectObject(m_hbackDC, original);
@@ -66,9 +66,8 @@ void SharkBase::Render(HDC _dc)
 	int Height = m_pTex->GetHeight();
 	BitBlt(m_hMemDC, 0, 0, Width, Width, _dc, (int)(vPos.x - vScale.x / 2), (int)(vPos.y - vScale.x / 2), SRCCOPY);
 	PlgBlt(m_hbackDC, m_pPoint, m_pTex->GetDC(), 0, 0, m_pTex->GetWidth(), m_pTex->GetHeight(), NULL, 0, 0);
-	TransparentBlt(m_hMemDC, 0, 0, Width, Width, m_hbackDC, 0, 0, Width, Width, RGB(255, 0, 255));
+	TransparentBlt(m_hMemDC, 0, 0, Width, Width, m_hbackDC, 0, 0, Width, Width, RGB(0, 0, 0));
 	BitBlt(_dc, (int)(vPos.x - vScale.x / 2), (int)(vPos.y - vScale.x / 2), Width, Width, m_hMemDC, 0, 0, SRCCOPY);
-	Component_Render(_dc);
 }
 
 void SharkBase::Rotate(double angle)
